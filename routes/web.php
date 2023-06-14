@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KriteriaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Auth::routes();
 Route::get('/', function(){
     return redirect()->route('login');
 });
+
+Route::resource('kriterias', KriteriaController::class);
